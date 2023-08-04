@@ -133,8 +133,7 @@ While podlet can be run as-is in a podman or docker container, passing the run c
 
 An example of a generic podman run command that should run the most up-to-date version of podlet with the current directory and user's quadlet directory passed to the container would be:
 
-`podman run --rm -v $PWD:$PWD -v $HOME/.config/containers/systemd/:/usr/share/containers/systemd/ -w $PWD --security-opt label=disable --pull=newer quay.io/k9withabone/podlet
-`
+`podman run --rm -v $PWD:$PWD -v $HOME/.config/containers/systemd/:/usr/share/containers/systemd/ -w $PWD --security-opt label=disable --pull=newer quay.io/k9withabone/podlet`
 
 Please note that --security-opt label=disable may be required for SELinux systems when using $PWD variables.  If your system does not use SELinux this may not be required.
 
